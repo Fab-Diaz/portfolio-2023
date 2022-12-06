@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "experimentalDecorators": true,
+    "noImplicitUseStrict": true,
+    "importsNotUsedAsValues": "remove",
+    "preserveSymlinks": true
+  }
+}
