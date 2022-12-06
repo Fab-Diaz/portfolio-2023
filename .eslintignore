@@ -1,0 +1,14 @@
+node_modules/*
+node_modules
+public/*
+storybook-static/*
+dist
+.next
+.vscode
+scripts
+.next/*
+out
+.eslintrc.js
+next.config.js
+jest.config.js
+commitlint.config.js
