@@ -19,9 +19,9 @@ export const CaseWebMobile = ({
 }: CaseWebMobileProps): JSX.Element => {
   return (
     <Stack direction="column" spacing={4} height="100%">
-        <Box component="div" flex={40}>
-          <DescriptionSection {...content} />
-        </Box>
+      <Box component="div" flex={40}>
+        <DescriptionSection {...content} />
+      </Box>
       <ImageSwiper images={images} />
       <ShowMobile key={`showMobile_${slug}`} model={`Mobile_${slug}.glb`} />
     </Stack>

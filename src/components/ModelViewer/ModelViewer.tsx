@@ -1,6 +1,7 @@
 import { Canvas, Vector3 } from '@react-three/fiber'
 import { Box as ThreeBox, OrbitControls } from '@react-three/drei'
 import { GltfModel } from '@/components'
+import { useState } from 'react'
 
 export type ModelViewerMovement = 'fixed' | 'float' | 'rotate'
 
@@ -44,6 +45,8 @@ type ModelViewerProps = {
   pointLights?: ModelViewerPointLight[]
   ambientLights?: ModelViewerAmbientLight[]
   spotlights?: ModelViewerSpotlight[]
+  stopWhenManipulating?: boolean
+  enableZoom?: boolean
 }
 
 export const ModelViewer = ({
@@ -56,9 +59,17 @@ export const ModelViewer = ({
   pointLights,
   ambientLights,
   spotlights,
+  stopWhenManipulating = true,
+  enableZoom = true,
 }: ModelViewerProps): JSX.Element => {
+  const [isManipulating, setIsManipulating] = useState<boolean>(false)
+
   return (
-    <Canvas shadows={true}>
+    <Canvas
+      shadows={true}
+      onMouseEnter={() => stopWhenManipulating && setIsManipulating(true)}
+      onMouseLeave={() => stopWhenManipulating && setIsManipulating(false)}
+    >
       {ambientLights?.map(({ intensity = 0.4 }, index) => (
         <ambientLight
           key={`${modelPath}_ambientLight_${index}`}
@@ -108,9 +119,11 @@ export const ModelViewer = ({
         position={position}
         camera={camera}
         movement={movement}
+        isManipulating={isManipulating}
       />
       <OrbitControls
         rotateSpeed={1}
+        enableZoom={enableZoom}
         minAzimuthAngle={orbits?.minAzimuthAngle ?? -10}
         maxAzimuthAngle={orbits?.maxAzimuthAngle ?? 10}
         minPolarAngle={orbits?.minPolarAngle ?? -10}

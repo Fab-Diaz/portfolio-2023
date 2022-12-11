@@ -6,6 +6,8 @@ export const HeroModelMinimalist = (): JSX.Element => {
     <Box component="div" height="100%" flex={60} sx={{ cursor: 'grab' }}>
       <ModelViewer
         scale={1}
+        enableZoom={false}
+        stopWhenManipulating={false}
         modelPath="/static/models/Minimalist_2.glb"
         movement="float"
         orbits={{

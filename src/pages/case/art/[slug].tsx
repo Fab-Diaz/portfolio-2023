@@ -31,6 +31,7 @@ const Case: NextPage = () => {
   const ModelOffice = (
     <ModelViewer
       scale={1}
+      movement="fixed"
       modelPath="/static/models/Small_Office.glb"
       camera={{ position: [18, 12, -15] }}
       spotlights={[
@@ -41,6 +42,12 @@ const Case: NextPage = () => {
           //helper: true,
         },
       ]}
+      orbits={{
+        minAzimuthAngle: 1.5,
+        maxAzimuthAngle: 3.5,
+        minPolarAngle: 0.4,
+        maxPolarAngle: 1.4,
+      }}
       ambientLights={[{ intensity: 0.6 }]}
     />
   )
@@ -48,8 +55,15 @@ const Case: NextPage = () => {
   const ModelDungeon = (
     <ModelViewer
       scale={1}
+      movement="fixed"
       modelPath="/static/models/Small_Dungeon.glb"
       camera={{ position: [11, 8, 10] }}
+      orbits={{
+        minAzimuthAngle: -0.3,
+        maxAzimuthAngle: 1.8,
+        minPolarAngle: 0.4,
+        maxPolarAngle: 1.4,
+      }}
       pointLights={[
         {
           position: [2.0, 6, -7],

@@ -18,6 +18,7 @@ export const ShowWeb = ({ model, isShown }: ShowWebProps): JSX.Element => {
     >
       <ModelViewer
         scale={1}
+        enableZoom={false}
         modelPath={`/static/models/${model}`}
         movement="fixed"
         orbits={{

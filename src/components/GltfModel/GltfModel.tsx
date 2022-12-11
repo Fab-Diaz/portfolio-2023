@@ -1,4 +1,4 @@
-import { MutableRefObject, useRef } from 'react'
+import { MutableRefObject, useRef, useState } from 'react'
 import { useLoader, useFrame, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { ModelViewerCamera, ModelViewerMovement } from '@/components'
@@ -9,6 +9,7 @@ type GltfModelProps = {
   position: number[]
   camera?: ModelViewerCamera
   movement?: ModelViewerMovement
+  isManipulating?: boolean
 }
 
 export const GltfModel = ({
@@ -17,15 +18,33 @@ export const GltfModel = ({
   scale = 40,
   position = [0, 0, 0],
   camera = { position: [7, 7, -7] },
+  isManipulating = false,
 }: GltfModelProps): JSX.Element => {
+  const [movementRotationSwitch, setMovementRotationSwitch] = useState<
+    'left' | 'right'
+  >('left')
+
   const ref: MutableRefObject<any> = useRef()
   const gltf = useLoader(GLTFLoader, modelPath)
 
   useFrame((state) => {
-    if (!ref?.current) return
+    if (!ref?.current || isManipulating) return
     switch (movement) {
       case 'rotate':
-        ref.current.rotation.y += 0.003
+        if (movementRotationSwitch === 'left') {
+          if (ref.current.rotation.y < 1) {
+            ref.current.rotation.y += 0.003
+          } else {
+            setMovementRotationSwitch('right')
+          }
+        }
+        if (movementRotationSwitch === 'right') {
+          if (ref.current.rotation.y > -1) {
+            ref.current.rotation.y -= 0.003
+          } else {
+            setMovementRotationSwitch('left')
+          }
+        }
         break
       case 'float':
         const t = state.clock.getElapsedTime()
@@ -53,8 +72,6 @@ export const GltfModel = ({
         object={gltf.scene}
         position={position}
         scale={scale}
-        //onPointerOver={(event) => null}
-        //onPointerOut={(event) => null}
       />
     </>
   )
