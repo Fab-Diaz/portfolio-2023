@@ -143,6 +143,17 @@ theme.components = {
       },
     },
   },
+  MuiChip: {
+    styleOverrides: {
+      root: {
+        fontFamily: defaultFont,
+        fontSize: '1rem',
+        padding: 4,
+        background: `${theme.palette.secondary.light}`,
+        color: `${theme.palette.common.white}`,
+      },
+    },
+  },
 }
 
 export default theme

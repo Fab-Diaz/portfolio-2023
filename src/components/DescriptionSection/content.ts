@@ -59,6 +59,7 @@ export const contentRampage: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  tags: ['NextJs', 'Typescript', 'Shopify', 'GraphQL'],
 }
 
 export const contentRobidus: DescriptionSectionProps = {
@@ -73,6 +74,7 @@ export const contentRobidus: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  tags: ['ReactJs', 'Typescript'],
 }
 
 export const contentVloto: DescriptionSectionProps = {
@@ -87,6 +89,7 @@ export const contentVloto: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  tags: ['React Native'],
 }
 
 export const contentQandidates: DescriptionSectionProps = {
@@ -101,6 +104,7 @@ export const contentQandidates: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  tags: ['NextJs', 'Typescript', 'Cypress', 'GraphQL'],
 }
 
 export const contentRebels: DescriptionSectionProps = {
@@ -115,11 +119,12 @@ export const contentRebels: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  tags: ['NextJs', 'Typescript'],
 }
 
 export const contentOffice: DescriptionSectionProps = {
   title: 'Office',
-  subtitle: 'Modelling',
+  subtitle: 'Modeling',
   description:
     'Lorem ipsum dolor sit amet, ' +
     'consectetur adipiscing elit, sed do eiusmod ' +
@@ -133,7 +138,7 @@ export const contentOffice: DescriptionSectionProps = {
 
 export const contentDungeon: DescriptionSectionProps = {
   title: 'Dungeon',
-  subtitle: 'Modelling',
+  subtitle: 'Modeling',
   description:
     'Lorem ipsum dolor sit amet, ' +
     'consectetur adipiscing elit, sed do eiusmod ' +
@@ -147,7 +152,7 @@ export const contentDungeon: DescriptionSectionProps = {
 
 export const contentLamp: DescriptionSectionProps = {
   title: 'Lamp',
-  subtitle: 'Modelling',
+  subtitle: 'Modeling',
   description:
     'Lorem ipsum dolor sit amet, ' +
     'consectetur adipiscing elit, sed do eiusmod ' +
@@ -171,6 +176,8 @@ export const contentPlainshare: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  buttonText: 'Get the app',
+  buttonLink: 'https://www.plainshare.com/',
 }
 
 export const contentTaalqafe: DescriptionSectionProps = {
@@ -185,6 +192,8 @@ export const contentTaalqafe: DescriptionSectionProps = {
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  buttonText: 'Read the dedicated article',
+  buttonLink: 'https://rebels.io/rebels-insights/rebels-taalqafe',
 }
 
 export const contentBob: DescriptionSectionProps = {
@@ -198,5 +207,15 @@ export const contentBob: DescriptionSectionProps = {
     'exercitation ullamco laboris nisi ut aliquip ex ' +
     'ea commodo consequat. Duis aute irure dolor in ' +
     'reprehenderit in voluptate velit esse cillum dolore ' +
+    'eu fugiat nulla pariatur.' +
+    'Lorem ipsum dolor sit amet, ' +
+    'consectetur adipiscing elit, sed do eiusmod ' +
+    'tempor incididunt ut labore et dolore magna ' +
+    'aliqua. Ut enim ad minim veniam, quis nostrud ' +
+    'exercitation ullamco laboris nisi ut aliquip ex ' +
+    'ea commodo consequat. Duis aute irure dolor in ' +
+    'reprehenderit in voluptate velit esse cillum dolore ' +
     'eu fugiat nulla pariatur.',
+  buttonText: 'Get the game',
+  buttonLink: 'https://unitrax.itch.io/bob',
 }

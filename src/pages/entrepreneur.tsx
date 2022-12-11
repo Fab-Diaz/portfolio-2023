@@ -18,17 +18,17 @@ const Entrepreneur: NextPage = () => {
     {
       image: 'business/plainshare/plainshare_1.png',
       title: 'Plainshare',
-      link: '/case/plainshare',
+      link: '/case/business/plainshare',
     },
     {
       image: 'business/taalqafe/taalqafe_1.png',
       title: 'TaalQafe',
-      link: '/case/taalqafe',
+      link: '/case/business/taalqafe',
     },
     {
       image: 'business/bob/bob_1.png',
       title: 'Bob',
-      link: '/case/bob',
+      link: '/case/business/bob',
     },
   ]
 
