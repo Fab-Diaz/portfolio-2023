@@ -14,7 +14,7 @@ export const CaseBusiness = ({
   images,
   content,
 }: CaseBusinessProps): JSX.Element => (
-  <Stack direction={"row"} spacing={4} height="88%">
+  <Stack direction="row" spacing={4} height="88%">
     <Box component="div" flex={50}>
       <DescriptionSection {...content} />
     </Box>

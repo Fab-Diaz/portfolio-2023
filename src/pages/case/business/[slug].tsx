@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { useMediaQuery } from '@mui/material'
 import {
-  CaseBusiness, CaseBusinessMobile, CaseWeb, CaseWebMobile,
+  CaseBusiness,
+  CaseBusinessMobile,
   contentBob,
   contentPlainshare,
   contentTaalqafe,

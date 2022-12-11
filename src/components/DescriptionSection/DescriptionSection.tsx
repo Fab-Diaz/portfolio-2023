@@ -1,4 +1,4 @@
-import {Box, Button, Chip, Stack, Typography} from '@mui/material'
+import { Box, Button, Chip, Stack, Typography } from '@mui/material'
 import Link from 'next/link'
 
 export type DescriptionSectionProps = {
@@ -38,7 +38,7 @@ export const DescriptionSection = ({
       {tags && (
         <Stack direction="row" spacing={3} mb={4}>
           {tags.map((tag) => (
-            <Chip key={tag} label={tag}/>
+            <Chip key={tag} label={tag} />
           ))}
         </Stack>
       )}
@@ -49,7 +49,10 @@ export const DescriptionSection = ({
         <Link href={buttonLink}>
           <Button
             variant="contained"
-            sx={{ width: { xs: '200px', sm: '300px', md: 'fit-content' }, mt: 8 }}
+            sx={{
+              width: { xs: '200px', sm: '300px', md: 'fit-content' },
+              mt: 8,
+            }}
           >
             {buttonText}
           </Button>

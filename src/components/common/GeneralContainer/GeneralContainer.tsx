@@ -3,8 +3,8 @@ import { Container } from '@mui/material'
 
 export type GeneralContainerProps = {
   children: ReactNode
-  minHeight?: any
-  height?: any
+  minHeight?: unknown
+  height?: unknown
 }
 
 export const GeneralContainer = ({
