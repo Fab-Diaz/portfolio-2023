@@ -7,11 +7,13 @@ import 'swiper/css/navigation'
 
 export type ImageSwiperProps = {
   images: string[]
+  height?: string
   objectFit?: 'cover' | 'contain'
 }
 
 export const ImageSwiper = ({
   images,
+  height = '100%',
   objectFit = 'cover',
 }: ImageSwiperProps): JSX.Element => (
   <Swiper
@@ -23,7 +25,7 @@ export const ImageSwiper = ({
     style={{ margin: '40px -20px' }}
   >
     {images.map((image) => (
-      <SwiperSlide key={image}>
+      <SwiperSlide key={image} style={{ height }}>
         <img
           src={`/static/images/${image}`}
           alt={image}

@@ -46,17 +46,17 @@ export const DescriptionSection = ({
         {description}
       </Typography>
       {buttonLink && buttonText && (
-        <Link href={buttonLink}>
-          <Button
-            variant="contained"
-            sx={{
-              width: { xs: '200px', sm: '300px', md: 'fit-content' },
-              mt: 8,
-            }}
-          >
-            {buttonText}
-          </Button>
-        </Link>
+        <Button
+          variant="contained"
+          href={buttonLink}
+          target="_blank"
+          sx={{
+            width: { xs: '200px', sm: '300px', md: 'fit-content' },
+            mt: 8,
+          }}
+        >
+          {buttonText}
+        </Button>
       )}
     </Box>
   )

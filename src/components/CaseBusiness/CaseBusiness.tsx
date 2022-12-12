@@ -19,7 +19,7 @@ export const CaseBusiness = ({
       <DescriptionSection {...content} />
     </Box>
     <Box component="div" flex={50}>
-      <ImageGrid images={images} sizeMd={6} />
+      <ImageGrid images={images} sizeMd={6} elementHeight="270px" />
     </Box>
   </Stack>
 )
