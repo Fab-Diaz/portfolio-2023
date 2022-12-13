@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode } from 'react'
 import { Container } from '@mui/material'
 
 export type GeneralContainerProps = {
   children: ReactNode
-  minHeight?: unknown
-  height?: unknown
+  minHeight?: any
+  height?: any
 }
 
 export const GeneralContainer = ({

@@ -27,11 +27,9 @@ const Case: NextPage = () => {
 
   const [images] = useState<string[]>([
     DEFAULT_IMAGE,
-    `cases/business/${slug}/${slug}_2.png`,
-    `cases/business/${slug}/${slug}_3.png`,
-    `cases/business/${slug}/${slug}_4.png`,
-    `cases/business/${slug}/${slug}_5.png`,
-    `cases/business/${slug}/${slug}_6.png`,
+    ...Array.from('x'.repeat(5)).map(
+      (_, i) => `cases/business/${slug}/${slug}_${i + 2}.png`
+    ),
   ])
 
   const [content, setContent] =

@@ -83,9 +83,9 @@ const Case: NextPage = () => {
 
   const [images] = useState<string[]>([
     DEFAULT_IMAGE,
-    `cases/art/${slug}/${slug}_2.png`,
-    `cases/art/${slug}/${slug}_3.png`,
-    `cases/art/${slug}/${slug}_4.png`,
+    ...Array.from('x'.repeat(3)).map(
+      (_, i) => `cases/art/${slug}/${slug}_${i + 2}.png`
+    ),
   ])
   const [model, setModel] = useState<JSX.Element>(<Loader />)
 

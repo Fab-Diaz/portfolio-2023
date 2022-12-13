@@ -16,6 +16,7 @@ export const DelayedLink = ({
   const router = useRouter()
   const { setTransitionState, setTarget } = useContext(PageTransitionerContext)
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const delayAndGo = (e: any) => {
     e.preventDefault()
 

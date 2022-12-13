@@ -16,6 +16,6 @@ export const CaseBusinessMobile = ({
 }: CaseBusinessMobileProps): JSX.Element => (
   <Stack direction="column" spacing={4} height="88%">
     <DescriptionSection {...content} />
-    <ImageSwiper images={images} objectFit="cover" height={'45vh'} />
+    <ImageSwiper images={images} objectFit="cover" height="45vh" />
   </Stack>
 )

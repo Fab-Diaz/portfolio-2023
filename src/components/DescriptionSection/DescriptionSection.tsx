@@ -1,5 +1,4 @@
 import { Box, Button, Chip, Stack, Typography } from '@mui/material'
-import Link from 'next/link'
 
 export type DescriptionSectionProps = {
   title: string

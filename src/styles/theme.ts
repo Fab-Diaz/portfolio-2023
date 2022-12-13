@@ -142,6 +142,17 @@ theme.components = {
         },
       },
     },
+    variants: [
+      {
+        props: { variant: 'text' },
+        style: {
+          ':disabled': {
+            color: theme.palette.primary.main,
+            border: `1px solid ${theme.palette.primary.main}`,
+          },
+        },
+      },
+    ],
   },
   MuiChip: {
     styleOverrides: {

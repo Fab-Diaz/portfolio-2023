@@ -24,6 +24,7 @@ export const GltfModel = ({
     'left' | 'right'
   >('left')
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref: MutableRefObject<any> = useRef()
   const gltf = useLoader(GLTFLoader, modelPath)
 
