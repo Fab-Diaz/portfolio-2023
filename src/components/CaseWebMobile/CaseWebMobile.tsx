@@ -22,7 +22,7 @@ export const CaseWebMobile = ({
       <Box component="div" flex={40}>
         <DescriptionSection {...content} />
       </Box>
-      <ImageSwiper images={images} />
+      <ImageSwiper images={images} objectFit="cover" height="45vh" />
       <ShowMobile key={`showMobile_${slug}`} model={`Mobile_${slug}.glb`} />
     </Stack>
   )

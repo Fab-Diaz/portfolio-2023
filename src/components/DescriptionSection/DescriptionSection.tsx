@@ -39,9 +39,9 @@ export const DescriptionSection = ({
         )}
       </Stack>
       {tags && (
-        <Stack direction="row" spacing={3} mb={4}>
+        <Stack direction="row" flexWrap="wrap">
           {tags.map((tag) => (
-            <Chip key={tag} label={tag} />
+            <Chip key={tag} label={tag} sx={{ mb: 4, mr: 2 }} />
           ))}
         </Stack>
       )}
@@ -54,7 +54,7 @@ export const DescriptionSection = ({
           href={buttonLink}
           target={buttonTarget}
           sx={{
-            width: { xs: '200px', sm: '300px', md: 'fit-content' },
+            width: { xs: '100%', sm: '300px', md: 'fit-content' },
             mt: 8,
           }}
         >

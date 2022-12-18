@@ -9,12 +9,14 @@ export type ImageSwiperProps = {
   images: string[]
   height?: string
   objectFit?: 'cover' | 'contain'
+  margin?: string
 }
 
 export const ImageSwiper = ({
   images,
   height = '100%',
   objectFit = 'cover',
+  margin = '40px -20px',
 }: ImageSwiperProps): JSX.Element => (
   <Swiper
     loop={true}
@@ -22,7 +24,7 @@ export const ImageSwiper = ({
     slidesPerView={1.2}
     spaceBetween={10}
     centeredSlides={true}
-    style={{ margin: '40px -20px' }}
+    style={{ margin }}
   >
     {images.map((image) => (
       <SwiperSlide key={image} style={{ height }}>

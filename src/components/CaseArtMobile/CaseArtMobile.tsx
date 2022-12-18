@@ -23,7 +23,7 @@ export const CaseArtMobile = ({
       <Box component="div">
         <DescriptionSection {...content} />
       </Box>
-      <ImageSwiper images={images} />
+      <ImageSwiper images={images} objectFit="cover" height="45vh" />
       <Stack height={modelHeight} mx="-20px !important" my={0}>
         {model}
       </Stack>

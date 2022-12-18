@@ -35,7 +35,12 @@ export const ContactBlock = ({
     >
       <Box component="div" flex={60}>
         {isTabletAndMobile ? (
-          <ImageSwiper images={images} objectFit="cover" height="45vh" />
+          <ImageSwiper
+            images={images}
+            objectFit="cover"
+            height="45vh"
+            margin="0 -20px 40px -20px"
+          />
         ) : (
           <ImageGrid images={images} sizeMd={3} elementHeight={250} />
         )}
