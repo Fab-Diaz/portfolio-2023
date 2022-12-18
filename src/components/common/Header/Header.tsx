@@ -53,7 +53,7 @@ export const Header = (): JSX.Element => {
             py: 2,
           }}
         >
-          🠔 Go home
+          {'< Go home'}
         </Button>
       </DelayedLink>
       <Stack direction="row" spacing={4}>

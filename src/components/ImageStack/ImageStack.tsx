@@ -1,4 +1,5 @@
 import { Box, Stack } from '@mui/material'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export type ImageStackItem = {
   id: number
@@ -40,13 +41,15 @@ export const ImageStack = ({
             cursor: 'pointer',
           }}
         >
-          <img
+          <LazyLoadImage
             src={`/static/images/${link}`}
+            effect="blur"
             alt={link}
+            width="100%"
+            height={height}
             style={{
               objectFit,
-              width: '100%',
-              height: '100%',
+              height,
             }}
           />
         </Box>

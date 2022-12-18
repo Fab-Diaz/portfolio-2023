@@ -60,7 +60,7 @@ export const HeaderMobile = (): JSX.Element => {
           }}
           onClick={() => router.back()}
         >
-          🠔 Go home
+          {'< Go home'}
         </Button>
       </DelayedLink>
       <IconButton

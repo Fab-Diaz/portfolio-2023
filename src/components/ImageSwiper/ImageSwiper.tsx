@@ -1,5 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -28,13 +29,14 @@ export const ImageSwiper = ({
   >
     {images.map((image) => (
       <SwiperSlide key={image} style={{ height }}>
-        <img
+        <LazyLoadImage
+          effect="blur"
           src={`/static/images/${image}`}
           alt={image}
+          width="100%"
+          height="100%"
           style={{
             objectFit,
-            width: '100%',
-            height: '100%',
           }}
         />
       </SwiperSlide>

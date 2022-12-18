@@ -1,4 +1,5 @@
 import { ImageList, ImageListItem, useMediaQuery } from '@mui/material'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import theme from '@/styles/theme'
 
 export type ImageGridProps = {
@@ -25,14 +26,15 @@ export const ImageGrid = ({
     <ImageList rowHeight={elementHeight ?? 150} cols={cols} variant={variant}>
       {images.map((image) => (
         <ImageListItem key={image} sx={{ p: { xs: 0, md: 4 } }}>
-          <img
+          <LazyLoadImage
+            effect="blur"
             src={`/static/images/${image}`}
             alt={image}
+            height="100%"
+            width="100%"
             style={{
               objectFit,
               objectPosition: 'center',
-              width: '100%',
-              height: '100%',
             }}
           />
         </ImageListItem>

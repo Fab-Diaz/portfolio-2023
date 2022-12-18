@@ -1,5 +1,6 @@
-import { Box, Grid, Stack, Typography } from '@mui/material'
+import { Grid, Stack, Typography } from '@mui/material'
 import { DelayedLink } from '@/components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export type CaseGridItem = {
   image: string
@@ -25,17 +26,16 @@ export const CaseGrid = ({ items }: CaseGridProps): JSX.Element => {
         >
           <DelayedLink link={link}>
             <Stack height="100%">
-              <Box component="div" height="40vh" width="100%">
-                <img
-                  src={`/static/images/cases/${image}`}
-                  alt={title}
-                  style={{
-                    objectFit: 'cover',
-                    width: '100%',
-                    height: '100%',
-                  }}
-                />
-              </Box>
+              <LazyLoadImage
+                effect="blur"
+                src={`/static/images/cases/${image}`}
+                alt={title}
+                style={{
+                  objectFit: 'cover',
+                  width: '100%',
+                  height: '40vh',
+                }}
+              />
               <Typography variant="h2" color="primary.main" sx={{ my: 4 }}>
                 {title}
               </Typography>
