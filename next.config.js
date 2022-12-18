@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   reactStrictMode: true,
-
+  distDir: 'build',
   webpack: (config, options) => {
     // Adds support for using alias imports
     config.resolve.alias['components'] = path.join(__dirname, 'src/components')
