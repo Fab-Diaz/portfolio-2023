@@ -10,7 +10,7 @@ import {
 import theme from '@/styles/theme'
 
 const ErrorPage: NextPage = () => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   return (
     <GeneralContainer>

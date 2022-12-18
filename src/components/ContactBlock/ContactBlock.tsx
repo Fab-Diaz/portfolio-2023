@@ -24,7 +24,7 @@ export const ContactBlock = ({
   socials,
   content,
 }: ContactProps): JSX.Element => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   return (
     <Stack

@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation'
 import theme, { defaultFont, headerFont } from '@/styles/theme'
 
 export const HeroTitle = (): JSX.Element => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
   const styledTitle = isTabletAndMobile
     ? {
         fontSize: '2.4rem',

@@ -12,7 +12,7 @@ import {
 import theme from '@/styles/theme'
 
 const Developer: NextPage = () => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   const caseItems: CaseGridItem[] = [
     {
@@ -43,7 +43,7 @@ const Developer: NextPage = () => {
   ]
 
   return (
-    <GeneralContainer height="100%" minHeight="100%">
+    <GeneralContainer>
       {isTabletAndMobile ? <HeaderMobile /> : <Header />}
       <Box component="div" width={{ xs: '100%', md: '50%' }}>
         <DescriptionSection {...contentWeb} />

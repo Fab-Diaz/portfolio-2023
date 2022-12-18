@@ -20,7 +20,7 @@ import { useRouter } from 'next/dist/client/router'
 import { useEffect, useState } from 'react'
 
 const Case: NextPage = () => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   const router = useRouter()
 

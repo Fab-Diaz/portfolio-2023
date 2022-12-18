@@ -20,7 +20,7 @@ import { useEffect, useState } from 'react'
 import { Loader } from '@react-three/drei'
 
 const Case: NextPage = () => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   const router = useRouter()
 

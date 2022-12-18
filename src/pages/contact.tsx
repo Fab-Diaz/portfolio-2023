@@ -17,7 +17,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 const Contact: NextPage = () => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
   const socialSize = isTabletAndMobile ? 'medium' : 'large'
 
   const images = Array.from('x'.repeat(9)).map(

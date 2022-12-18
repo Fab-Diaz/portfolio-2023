@@ -19,7 +19,7 @@ export const ImageGrid = ({
   objectFit = 'cover',
   variant = 'standard',
 }: ImageGridProps): JSX.Element => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
   const cols = isTabletAndMobile ? sizeXs : sizeMd
 
   return (

@@ -12,7 +12,7 @@ import {
 import theme from '@/styles/theme'
 
 const Entrepreneur: NextPage = () => {
-  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   const caseItems: CaseGridItem[] = [
     {

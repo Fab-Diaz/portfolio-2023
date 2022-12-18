@@ -114,7 +114,7 @@ theme.components = {
         fontWeight: 500,
         textTransform: 'none',
         fontFamily: defaultFont,
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
           fontSize: '1.2rem',
           padding: '7px 20px',
         },
@@ -133,7 +133,7 @@ theme.components = {
         lineHeight: '2.2rem',
         padding: '14px  40px',
         fontWeight: 500,
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
           fontSize: '1.2rem',
           padding: '7px 20px',
         },
