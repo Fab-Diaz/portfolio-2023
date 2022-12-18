@@ -1,4 +1,4 @@
-import { Box, Button, Chip, Stack, Typography } from '@mui/material'
+import { Alert, Box, Button, Chip, Stack, Typography } from '@mui/material'
 
 export type DescriptionSectionProps = {
   title: string
@@ -6,7 +6,9 @@ export type DescriptionSectionProps = {
   description: string
   buttonLink?: string
   buttonText?: string
+  buttonTarget?: string
   tags?: string[]
+  warning?: string
 }
 
 export const DescriptionSection = ({
@@ -15,7 +17,9 @@ export const DescriptionSection = ({
   description,
   buttonLink,
   buttonText,
+  buttonTarget = '_blank',
   tags,
+  warning,
 }: DescriptionSectionProps): JSX.Element => {
   return (
     <Box component="div">
@@ -48,7 +52,7 @@ export const DescriptionSection = ({
         <Button
           variant="contained"
           href={buttonLink}
-          target="_blank"
+          target={buttonTarget}
           sx={{
             width: { xs: '200px', sm: '300px', md: 'fit-content' },
             mt: 8,
@@ -56,6 +60,19 @@ export const DescriptionSection = ({
         >
           {buttonText}
         </Button>
+      )}
+      {warning && (
+        <Alert
+          severity="warning"
+          variant="outlined"
+          sx={{
+            width: { xs: '100%', md: 'fit-content' },
+            mt: 4,
+            color: 'primary.main',
+          }}
+        >
+          {warning}
+        </Alert>
       )}
     </Box>
   )

@@ -15,11 +15,11 @@ export const CaseBusiness = ({
   content,
 }: CaseBusinessProps): JSX.Element => (
   <Stack direction="row" spacing={4} height="88%">
-    <Box component="div" flex={50}>
+    <Box component="div" flex={30}>
       <DescriptionSection {...content} />
     </Box>
-    <Box component="div" flex={50}>
-      <ImageGrid images={images} sizeMd={2} elementHeight={350} />
+    <Box component="div" flex={70}>
+      <ImageGrid images={images} sizeMd={3} elementHeight={370} />
     </Box>
   </Stack>
 )

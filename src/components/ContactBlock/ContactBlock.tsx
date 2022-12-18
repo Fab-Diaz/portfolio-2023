@@ -37,7 +37,7 @@ export const ContactBlock = ({
         {isTabletAndMobile ? (
           <ImageSwiper images={images} objectFit="cover" height="45vh" />
         ) : (
-          <ImageGrid images={images} sizeMd={3} elementHeight={350} />
+          <ImageGrid images={images} sizeMd={3} elementHeight={250} />
         )}
       </Box>
       <Stack direction="column" height="100%" spacing={10} flex={40}>

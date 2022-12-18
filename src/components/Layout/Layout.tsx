@@ -17,8 +17,8 @@ export const Layout = ({
 }: LayoutProps): JSX.Element => (
   <ContextProviders>
     <NextSeo
-      title={title ?? 'NextJS Template'}
-      description={description ?? 'NextJS Template'}
+      title={title ?? 'Fabien Diaz - Portfolio'}
+      description={description ?? 'Fabien Diaz - Portfolio'}
     />
     {children}
     {error && <div>{error}</div>}

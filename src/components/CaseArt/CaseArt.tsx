@@ -20,7 +20,7 @@ export const CaseArt = ({
     <Box component="div" flex={40} height="80%">
       <Stack direction="column" spacing={4}>
         <DescriptionSection {...content} />
-        <ImageGrid images={images} sizeMd={2} elementHeight={405} />
+        <ImageGrid images={images} sizeMd={2} elementHeight={220} />
       </Stack>
     </Box>
     <Stack

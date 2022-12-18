@@ -1,6 +1,6 @@
-# NextJS Template
+# Fabien Diaz - Portfolio
 
-This is a basic NextJS Template project that includes the following dependencies:
+This is a basic Fabien Diaz - Portfolio project that includes the following dependencies:
 
 - TypeScript
 - Jest
