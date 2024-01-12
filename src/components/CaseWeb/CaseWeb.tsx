@@ -6,6 +6,7 @@ import {
   ImageStackItem,
   ShowWeb,
 } from '@/components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export type CaseWebProps = {
   images: ImageStackItem[]
@@ -13,6 +14,7 @@ export type CaseWebProps = {
   setSelectedImage: (image: ImageStackItem) => void
   content: DescriptionSectionProps
   slug: string
+  hasModel: boolean
 }
 
 export const CaseWeb = ({
@@ -21,6 +23,7 @@ export const CaseWeb = ({
   setSelectedImage,
   content,
   slug,
+  hasModel,
 }: CaseWebProps): JSX.Element => (
   <Stack direction="column" spacing={4} height="88%">
     <ImageStack
@@ -34,13 +37,24 @@ export const CaseWeb = ({
         <DescriptionSection {...content} />
       </Box>
       <Box component="div" flex={60}>
-        {images.map((image) => (
-          <ShowWeb
-            key={`showWeb_${image.link}`}
-            model={`Screen_${slug}_${image.id}.glb`}
-            isShown={selectedImage === image}
+        {hasModel ? (
+          images.map((image) => (
+            <ShowWeb
+              key={`showWeb_${image.link}`}
+              model={`Screen_${slug}_${image.id}.glb`}
+              isShown={selectedImage === image}
+            />
+          ))
+        ) : (
+          <LazyLoadImage
+            src={`/static/images/${
+              images.find((image) => image === selectedImage)?.link
+            }`}
+            effect="blur"
+            alt={images.find((image) => image === selectedImage)?.link}
+            width="100%"
           />
-        ))}
+        )}
       </Box>
     </Stack>
   </Stack>

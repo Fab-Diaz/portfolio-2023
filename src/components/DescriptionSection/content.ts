@@ -114,10 +114,24 @@ export const contentRebels: DescriptionSectionProps = {
     'Rebels is a showcase website for an outsourcing company. ' +
     'The website was built with a focus on simplicity and accessibility ' +
     'for both clients and future employees ' +
-    'Based in Amsterdam, I currently work as a front-end developer for ' +
+    'Based in Amsterdam, I worked as a front-end developer for ' +
     'Rebels and built, along with great colleagues, this modern and fast website.',
   tags: ['NextJs', 'Typescript'],
   buttonLink: 'https://www.rebels.io/',
+  buttonText: 'Visit website',
+}
+
+export const contentFlorbs: DescriptionSectionProps = {
+  title: 'Florbs',
+  subtitle: 'Web app',
+  description:
+    'Florbs is a software company that helps organizations streamline ' +
+    'their operations with powerful and user-friendly tools ' +
+    'for Google Workspace ' +
+    'Based in Utrecht, I worked as a front-end developer for ' +
+    'Florbs and built, along with great colleagues, their customizable and reliable platform.',
+  tags: ['VueJs'],
+  buttonLink: 'https://www.florbs.io/',
   buttonText: 'Visit website',
 }
 

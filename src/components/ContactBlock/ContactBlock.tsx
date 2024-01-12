@@ -48,11 +48,11 @@ export const ContactBlock = ({
       <Stack direction="column" height="100%" spacing={10} flex={40}>
         <DescriptionSection {...content} />
         <Alert
-          severity="error"
+          severity="info"
           variant="filled"
           sx={{ width: { xs: '100%', md: 'fit-content' } }}
         >
-          Not looking for a job at the moment
+          Open to job offers.
         </Alert>
         <Socials email="fabien@rebels.io" socials={socials} />
       </Stack>

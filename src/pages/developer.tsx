@@ -40,6 +40,11 @@ const Developer: NextPage = () => {
       title: 'Rebels',
       link: '/case/web/rebels',
     },
+    {
+      image: 'web/florbs/florbs_1.png',
+      title: 'Florbs',
+      link: '/case/web/florbs',
+    },
   ]
 
   return (

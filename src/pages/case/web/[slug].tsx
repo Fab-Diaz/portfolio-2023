@@ -8,6 +8,7 @@ import {
   contentRebels,
   contentRobidus,
   contentVloto,
+  contentFlorbs,
   DEFAULT_CONTENT,
   DescriptionSectionProps,
   GeneralContainer,
@@ -45,6 +46,8 @@ const Case: NextPage = () => {
   const [content, setContent] =
     useState<DescriptionSectionProps>(DEFAULT_CONTENT)
 
+  const [hasModel, setHasModel] = useState<boolean>(true)
+
   useEffect(() => {
     switch (slug) {
       case 'rampage':
@@ -62,6 +65,10 @@ const Case: NextPage = () => {
       case 'rebels':
         setContent(contentRebels)
         break
+      case 'florbs':
+        setContent(contentFlorbs)
+        setHasModel(false)
+        break
     }
   }, [])
 
@@ -73,6 +80,7 @@ const Case: NextPage = () => {
           images={images.map(({ link }) => link)}
           content={content}
           slug={slug as string}
+          hasModel={hasModel}
         />
       ) : (
         <CaseWeb
@@ -81,6 +89,7 @@ const Case: NextPage = () => {
           setSelectedImage={setSelectedImage}
           content={content}
           slug={slug as string}
+          hasModel={hasModel}
         />
       )}
     </GeneralContainer>

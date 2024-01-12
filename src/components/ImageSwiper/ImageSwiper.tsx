@@ -17,7 +17,7 @@ export const ImageSwiper = ({
   images,
   height = '100%',
   objectFit = 'cover',
-  margin = '40px -20px',
+  margin = '20px -20px',
 }: ImageSwiperProps): JSX.Element => (
   <Swiper
     loop={true}

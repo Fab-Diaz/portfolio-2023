@@ -55,7 +55,7 @@ export const DescriptionSection = ({
           target={buttonTarget}
           sx={{
             width: { xs: '100%', sm: '300px', md: 'fit-content' },
-            mt: 8,
+            my: 8,
           }}
         >
           {buttonText}
@@ -67,7 +67,7 @@ export const DescriptionSection = ({
           variant="outlined"
           sx={{
             width: { xs: '100%', md: 'fit-content' },
-            mt: 4,
+            my: 8,
             color: 'primary.main',
           }}
         >
