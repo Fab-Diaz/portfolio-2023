@@ -5,19 +5,13 @@
         "name": "typescript-styled-plugin",
         "validate": true,
         "lint": {
-          "validProperties": [
-            "font-smoothing"
-          ],
+          "validProperties": ["font-smoothing"],
           "emptyRules": "ignore"
         }
       }
     ],
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -36,12 +30,6 @@
     "incremental": true,
     "typeRoots": ["node_modules/@types"]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

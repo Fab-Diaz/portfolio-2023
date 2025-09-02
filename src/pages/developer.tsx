@@ -16,6 +16,16 @@ const Developer: NextPage = () => {
 
   const caseItems: CaseGridItem[] = [
     {
+      image: 'web/gassan/gassan_1.png',
+      title: 'Gassan',
+      link: '/case/web/gassan',
+    },
+    {
+      image: 'web/financial-lease/financial-lease_1.png',
+      title: 'Financial Lease',
+      link: '/case/web/financial-lease',
+    },
+    {
       image: 'web/rampage/rampage_1.png',
       title: 'Rampage',
       link: '/case/web/rampage',
@@ -24,6 +34,11 @@ const Developer: NextPage = () => {
       image: 'web/robidus/robidus_1.png',
       title: 'Robidus',
       link: '/case/web/robidus',
+    },
+    {
+      image: 'web/florbs/florbs_1.png',
+      title: 'Florbs',
+      link: '/case/web/florbs',
     },
     {
       image: 'web/vloto/vloto_1.png',
@@ -39,11 +54,6 @@ const Developer: NextPage = () => {
       image: 'web/rebels/rebels_1.png',
       title: 'Rebels',
       link: '/case/web/rebels',
-    },
-    {
-      image: 'web/florbs/florbs_1.png',
-      title: 'Florbs',
-      link: '/case/web/florbs',
     },
   ]
 

@@ -9,6 +9,8 @@ import {
   contentRobidus,
   contentVloto,
   contentFlorbs,
+  contentFinancialLease,
+  contentGassan,
   DEFAULT_CONTENT,
   DescriptionSectionProps,
   GeneralContainer,
@@ -46,8 +48,6 @@ const Case: NextPage = () => {
   const [content, setContent] =
     useState<DescriptionSectionProps>(DEFAULT_CONTENT)
 
-  const [hasModel, setHasModel] = useState<boolean>(true)
-
   useEffect(() => {
     switch (slug) {
       case 'rampage':
@@ -67,7 +67,12 @@ const Case: NextPage = () => {
         break
       case 'florbs':
         setContent(contentFlorbs)
-        setHasModel(false)
+        break
+      case 'financial-lease':
+        setContent(contentFinancialLease)
+        break
+      case 'gassan':
+        setContent(contentGassan)
         break
     }
   }, [])
@@ -79,8 +84,6 @@ const Case: NextPage = () => {
         <CaseWebMobile
           images={images.map(({ link }) => link)}
           content={content}
-          slug={slug as string}
-          hasModel={hasModel}
         />
       ) : (
         <CaseWeb
@@ -88,8 +91,6 @@ const Case: NextPage = () => {
           selectedImage={selectedImage}
           setSelectedImage={setSelectedImage}
           content={content}
-          slug={slug as string}
-          hasModel={hasModel}
         />
       )}
     </GeneralContainer>

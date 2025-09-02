@@ -50,7 +50,7 @@ module.exports = {
             name: 'react',
             importNames: ['default'],
             message:
-                "Please use direct import of a function or a type. E.g. import { useState, FC } from 'react'",
+              "Please use direct import of a function or a type. E.g. import { useState, FC } from 'react'",
           },
         ],
       },

@@ -135,6 +135,32 @@ export const contentFlorbs: DescriptionSectionProps = {
   buttonText: 'Visit website',
 }
 
+export const contentFinancialLease: DescriptionSectionProps = {
+  title: 'Financial Lease',
+  subtitle: 'Web App',
+  description:
+    'Financial Lease is a mobile application' +
+    'that allows your business to browse available vehicles' +
+    'and apply for a lease.' +
+    'The application was built with a focus on simplicity and automation ' +
+    'for business owners. Get your vehicle in a matter of 2 cups of coffee.',
+  tags: ['React Native', 'Typescript'],
+  buttonLink: 'https://www.financiallease.nl/',
+  buttonText: 'Visit website',
+}
+
+export const contentGassan: DescriptionSectionProps = {
+  title: 'Gassan',
+  subtitle: 'Web App',
+  description:
+    'Gassan is a Dutch family-owned company specializing in luxury diamonds,' +
+    'jewelry, and watches, with a plus-value in combining in-house diamond ' +
+    'cutting expertise, heritage craftsmanship, and exclusive retail experiences for high-end clients.',
+  tags: ['NextJs', 'Typescript', 'GraphQL', 'Backend management'],
+  buttonLink: 'https://www.gassan.com/',
+  buttonText: 'Visit website',
+}
+
 export const contentOffice: DescriptionSectionProps = {
   title: 'Office',
   subtitle: 'Modeling',

@@ -35,11 +35,11 @@ module.exports = {
         },
       })
       config.plugins.push(
-          new ForkTsCheckerWebpackPlugin({
-            eslint: {
-              files: './src/**/*.{ts,tsx,js,jsx}',
-            },
-          })
+        new ForkTsCheckerWebpackPlugin({
+          eslint: {
+            files: './src/**/*.{ts,tsx,js,jsx}',
+          },
+        })
       )
     }
     //#endregion

@@ -11,9 +11,9 @@ export const HeroTitle = (): JSX.Element => {
         lineHeight: '2.4rem',
       }
     : {
-        fontSize: '4.5rem',
+        fontSize: '4rem',
         wordSpacing: '1rem',
-        lineHeight: '4.5rem',
+        lineHeight: '4rem',
       }
 
   const styledSubTitle = isTabletAndMobile
