@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Alert, Box, Stack, useMediaQuery } from '@mui/material'
 import {
   DescriptionSection,
@@ -9,7 +10,7 @@ import {
 import theme from '@/styles/theme'
 
 export type Social = {
-  icon: JSX.Element
+  icon: ReactElement
   link: string
 }
 
@@ -23,7 +24,7 @@ export const ContactBlock = ({
   images,
   socials,
   content,
-}: ContactProps): JSX.Element => {
+}: ContactProps): ReactElement => {
   const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
 
   return (

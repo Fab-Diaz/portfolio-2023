@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode } from 'react'
 import { Container } from '@mui/material'
@@ -8,7 +9,7 @@ export type GeneralContainerProps = {
 
 export const GeneralContainer = ({
   children,
-}: GeneralContainerProps): JSX.Element => (
+}: GeneralContainerProps): ReactElement => (
   <Container
     disableGutters={true}
     sx={{

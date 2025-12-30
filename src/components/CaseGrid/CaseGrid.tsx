@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Grid, Stack, Typography } from '@mui/material'
 import { DelayedLink } from '@/components'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
@@ -12,7 +13,7 @@ export type CaseGridProps = {
   items: CaseGridItem[]
 }
 
-export const CaseGrid = ({ items }: CaseGridProps): JSX.Element => {
+export const CaseGrid = ({ items }: CaseGridProps): ReactElement => {
   return (
     <Grid container={true}>
       {items.map(({ image, title, link }) => (

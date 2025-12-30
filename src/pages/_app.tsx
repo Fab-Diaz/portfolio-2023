@@ -4,7 +4,7 @@ import { Layout, PageLoader, PageTransitioner } from '@/components'
 import { useIsPageLoading } from '@/hooks/useIsPageLoading'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   return (
     <>
       <CssBaseline />

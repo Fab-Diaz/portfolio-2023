@@ -5,7 +5,7 @@ import { PageTransitionerContext } from '@/context'
 export type DelayedLinkProps = {
   link: string
   onClick?: () => void
-  children: JSX.Element
+  children: ReactElement
 }
 
 export const DelayedLink = ({
@@ -25,7 +25,11 @@ export const DelayedLink = ({
     setTimeout(() => {
       setTransitionState('awaiting')
       console.log(link)
-      onClick ? onClick() : router.push(link)
+      if (onClick) {
+        onClick()
+      } else {
+        router.push(link)
+      }
     }, 400)
   }
 

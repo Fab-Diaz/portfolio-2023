@@ -1,7 +1,8 @@
+import { ReactElement } from 'react'
 import { Box } from '@mui/material'
 import { ModelViewer } from '@/components'
 
-export const HeroModelMinimalist = (): JSX.Element => {
+export const HeroModelMinimalist = (): ReactElement => {
   return (
     <Box component="div" height="100%" flex={60} sx={{ cursor: 'grab' }}>
       <ModelViewer

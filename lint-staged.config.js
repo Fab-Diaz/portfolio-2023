@@ -1,4 +1,4 @@
 module.exports = {
-  '**/*.+(js|jsx|ts|tsx)': ['yarn lint:fix', 'yarn format'],
+  '**/*.+(js|jsx|ts|tsx)': ['bun run lint:fix', 'bun run format'],
   '**/*.ts?(x)': () => 'tsc -p tsconfig.json --noEmit',
 }

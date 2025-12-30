@@ -23,7 +23,7 @@ type PageTransitionerProviderProps = {
 
 export const PageTransitionerProvider = ({
   children,
-}: PageTransitionerProviderProps): JSX.Element => {
+}: PageTransitionerProviderProps): React.ReactElement => {
   const [transitionState, setTransitionState] =
     useState<PageTransitionerState>('idle')
   const [target, setTarget] = useState('')

@@ -1,9 +1,10 @@
+import { ReactElement } from 'react'
 import { Button, Drawer, IconButton, Stack } from '@mui/material'
 import { useRouter } from 'next/dist/client/router'
 import { DelayedLink, headerItems } from '@/components'
 import { useState } from 'react'
 
-export const HeaderMobile = (): JSX.Element => {
+export const HeaderMobile = (): ReactElement => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 

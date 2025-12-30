@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Button, Stack } from '@mui/material'
 import { keyframes } from '@emotion/react'
 import { DelayedLink, headerItems } from '@/components'
@@ -7,7 +8,7 @@ const fadeInAnimation = keyframes`
   100% { opacity: 1 }
 `
 
-export const HeroMenu = (): JSX.Element => {
+export const HeroMenu = (): ReactElement => {
   return (
     <Stack
       spacing={4}

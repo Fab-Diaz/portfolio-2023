@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Stack } from '@mui/material'
 import {
   DescriptionSection,
@@ -13,7 +14,7 @@ export type CaseBusinessMobileProps = {
 export const CaseBusinessMobile = ({
   images,
   content,
-}: CaseBusinessMobileProps): JSX.Element => (
+}: CaseBusinessMobileProps): ReactElement => (
   <Stack direction="column" spacing={4} height="fit-content">
     <DescriptionSection {...content} />
     <ImageSwiper

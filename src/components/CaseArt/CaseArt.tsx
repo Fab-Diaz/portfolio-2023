@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Stack } from '@mui/material'
 import {
   DescriptionSection,
@@ -8,14 +9,14 @@ import {
 export type CaseArtProps = {
   images: string[]
   content: DescriptionSectionProps
-  model: JSX.Element
+  model: ReactElement
 }
 
 export const CaseArt = ({
   images,
   content,
   model,
-}: CaseArtProps): JSX.Element => (
+}: CaseArtProps): ReactElement => (
   <Stack direction={{ xs: 'column', md: 'row' }} spacing={10}>
     <Box component="div" flex={40} height="80%">
       <Stack direction="column" spacing={4}>

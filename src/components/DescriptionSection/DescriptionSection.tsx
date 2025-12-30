@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Alert, Box, Button, Chip, Stack, Typography } from '@mui/material'
 
 export type DescriptionSectionProps = {
@@ -20,7 +21,7 @@ export const DescriptionSection = ({
   buttonTarget = '_blank',
   tags,
   warning,
-}: DescriptionSectionProps): JSX.Element => {
+}: DescriptionSectionProps): ReactElement => {
   return (
     <Box component="div">
       <Stack direction={{ xs: 'column', md: 'row' }}>

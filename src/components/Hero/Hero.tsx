@@ -1,7 +1,8 @@
+import { ReactElement } from 'react'
 import { Stack } from '@mui/material'
 import { HeroMenu, HeroModelMinimalist, HeroTitle } from '@/components'
 
-export const Hero = (): JSX.Element => {
+export const Hero = (): ReactElement => {
   return (
     <Stack
       direction={{ xs: 'column', md: 'row' }}

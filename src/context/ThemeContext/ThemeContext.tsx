@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, ReactElement } from 'react'
 import { Theme } from '@mui/material/styles'
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles'
 
@@ -7,7 +7,7 @@ type IThemeContext = {
   theme: Theme
 }
 
-const ThemeContext = ({ children, theme }: IThemeContext): JSX.Element => {
+const ThemeContext = ({ children, theme }: IThemeContext): ReactElement => {
   return (
     <StyledEngineProvider injectFirst={true}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>

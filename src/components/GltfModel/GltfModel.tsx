@@ -1,6 +1,7 @@
-import { MutableRefObject, useRef, useState } from 'react'
+import { useRef, useState, createElement } from 'react'
 import { useLoader, useFrame, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Object3D } from 'three'
 import { ModelViewerCamera, ModelViewerMovement } from '@/components'
 
 type GltfModelProps = {
@@ -19,13 +20,12 @@ export const GltfModel = ({
   position = [0, 0, 0],
   camera = { position: [7, 7, -7] },
   isManipulating = false,
-}: GltfModelProps): JSX.Element => {
+}: GltfModelProps): React.ReactElement => {
   const [movementRotationSwitch, setMovementRotationSwitch] = useState<
     'left' | 'right'
   >('left')
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const ref: MutableRefObject<any> = useRef()
+  const ref = useRef<Object3D | null>(null)
   const gltf = useLoader(GLTFLoader, modelPath)
 
   useFrame((state) => {
@@ -52,7 +52,7 @@ export const GltfModel = ({
         ref.current.rotation.set(
           0.1 + Math.cos(t / 4.5) / 10,
           Math.sin(t / 4) / 4,
-          0.3 - (1 + Math.sin(t / 4)) / 8
+          0.3 - (1 + Math.sin(t / 4)) / 8,
         )
         ref.current.position.y = (1 + Math.sin(t / 2)) / 10
         break
@@ -63,17 +63,13 @@ export const GltfModel = ({
     threeCamera.position.set(
       camera.position[0],
       camera.position[1],
-      camera.position[2]
+      camera.position[2],
     )
   })
-  return (
-    <>
-      <primitive
-        ref={ref}
-        object={gltf.scene}
-        position={position}
-        scale={scale}
-      />
-    </>
-  )
+  return createElement('primitive', {
+    ref,
+    object: gltf.scene,
+    position,
+    scale,
+  })
 }

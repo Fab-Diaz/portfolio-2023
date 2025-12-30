@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react'
+import { ReactElement } from 'react'
+import { useEffect, useRef, RefObject } from 'react'
 import { useIsInViewport } from '@/hooks'
 
 export interface VideoProps {
@@ -6,13 +7,17 @@ export interface VideoProps {
   link: string
 }
 
-export const Video = ({ link, isTest = false }: VideoProps): JSX.Element => {
+export const Video = ({ link, isTest = false }: VideoProps): ReactElement => {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const isInViewport = useIsInViewport(videoRef)
+  const isInViewport = useIsInViewport(videoRef as RefObject<HTMLElement>)
 
   useEffect(() => {
     if (!isTest) {
-      isInViewport ? videoRef?.current?.play() : videoRef?.current?.pause()
+      if (isInViewport) {
+        videoRef?.current?.play()
+      } else {
+        videoRef?.current?.pause()
+      }
     }
   }, [isInViewport])
 

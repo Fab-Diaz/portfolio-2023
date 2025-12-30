@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Stack } from '@mui/material'
 import {
   DescriptionSection,
@@ -13,7 +14,7 @@ export type CaseBusinessProps = {
 export const CaseBusiness = ({
   images,
   content,
-}: CaseBusinessProps): JSX.Element => (
+}: CaseBusinessProps): ReactElement => (
   <Stack direction="row" spacing={4} height="88%">
     <Box component="div" flex={30}>
       <DescriptionSection {...content} />

@@ -45,7 +45,7 @@ const StyledOpeningContainer = styled(Stack)`
 export const PageTransitioner = (): ReactElement<unknown> => {
   const router = useRouter()
   const { target, transitionState, setTransitionState } = useContext(
-    PageTransitionerContext
+    PageTransitionerContext,
   )
 
   useEffect(() => {

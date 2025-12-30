@@ -1,8 +1,9 @@
+import { ReactElement } from 'react'
 import { useMediaQuery } from '@mui/material'
 import { TypeAnimation } from 'react-type-animation'
 import theme, { defaultFont, headerFont } from '@/styles/theme'
 
-export const HeroTitle = (): JSX.Element => {
+export const HeroTitle = (): ReactElement => {
   const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
   const styledTitle = isTabletAndMobile
     ? {

@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 export const useLocalStorage = <T>(
   key: string,
-  initialValue: T
+  initialValue: T,
 ): [T, (value: T) => void] => {
   // Get from local storage then
   // parse stored json or return initialValue

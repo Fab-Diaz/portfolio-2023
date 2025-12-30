@@ -77,18 +77,20 @@ export const PageLoader = ({
     const redirect =
       pageProps?.redirects?.find(
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ({ old_path }: any) => old_path === router.asPath
+        ({ old_path }: any) => old_path === router.asPath,
       ) ?? null
 
     if (redirect) {
-      redirect.is_permanent
-        ? router.replace(redirect.link)
-        : router.push(redirect.link)
+      if (redirect.is_permanent) {
+        router.replace(redirect.link)
+      } else {
+        router.push(redirect.link)
+      }
       setIsRedirecting(true)
     } else if (!redirect || isRedirecting) {
       setIsLoaded(true)
       setSentence(
-        `${sentences[Math.floor(Math.random() * sentences.length)]}..`
+        `${sentences[Math.floor(Math.random() * sentences.length)]}..`,
       )
       setIsRedirecting(false)
     }

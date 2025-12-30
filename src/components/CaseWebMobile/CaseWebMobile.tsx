@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Stack } from '@mui/material'
 import {
   DescriptionSection,
@@ -13,7 +14,7 @@ export type CaseWebMobileProps = {
 export const CaseWebMobile = ({
   images,
   content,
-}: CaseWebMobileProps): JSX.Element => {
+}: CaseWebMobileProps): ReactElement => {
   return (
     <Stack direction="column" spacing={4} height="100%">
       <Box component="div" flex={40}>

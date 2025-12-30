@@ -3,7 +3,7 @@ import { throttle } from '@/utils'
 
 export const useIsInViewport = <T extends HTMLElement>(
   currentElement: RefObject<T>,
-  offset = 0
+  offset = 0,
 ): boolean => {
   if (typeof window === 'undefined') return false
 
@@ -19,7 +19,7 @@ export const useIsInViewport = <T extends HTMLElement>(
       currentElement.current.getBoundingClientRect()
 
     setIsInViewport(
-      top + offset + refHeight >= 0 && top - offset <= window.innerHeight
+      top + offset + refHeight >= 0 && top - offset <= window.innerHeight,
     )
   }
 

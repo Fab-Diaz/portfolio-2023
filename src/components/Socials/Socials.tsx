@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Button, Link, Stack } from '@mui/material'
 import { Social } from '@/components'
 
@@ -6,7 +7,7 @@ export type SocialsProps = {
   socials: Social[]
 }
 
-export const Socials = ({ email, socials }: SocialsProps): JSX.Element => (
+export const Socials = ({ email, socials }: SocialsProps): ReactElement => (
   <Stack
     direction={{ xs: 'column', md: 'row' }}
     spacing={4}

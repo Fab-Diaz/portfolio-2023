@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { ImageList, ImageListItem, useMediaQuery } from '@mui/material'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import theme from '@/styles/theme'
@@ -18,7 +19,7 @@ export const ImageGrid = ({
   elementHeight,
   objectFit = 'cover',
   variant = 'standard',
-}: ImageGridProps): JSX.Element => {
+}: ImageGridProps): ReactElement => {
   const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
   const cols = isTabletAndMobile ? sizeXs : sizeMd
 

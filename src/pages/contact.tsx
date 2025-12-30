@@ -21,7 +21,7 @@ const Contact: NextPage = () => {
   const socialSize = isTabletAndMobile ? 'medium' : 'large'
 
   const images = Array.from('x'.repeat(9)).map(
-    (_, i) => `contact/contact_${i + 1}.png`
+    (_, i) => `contact/contact_${i + 1}.png`,
   )
 
   const socials: Social[] = [

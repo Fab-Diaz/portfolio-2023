@@ -12,7 +12,7 @@ import { ReactElement } from 'react'
 
 class MyDocument extends Document {
   static getInitialProps = async (
-    ctx: DocumentContext
+    ctx: DocumentContext,
   ): Promise<DocumentInitialProps> => {
     // Render app and page and get the context of the page with collected side effects.
     const sheets = new ServerStyleSheets()

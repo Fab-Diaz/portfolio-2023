@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Stack } from '@mui/material'
 import {
   DescriptionSection,
@@ -19,7 +20,7 @@ export const CaseWeb = ({
   selectedImage,
   setSelectedImage,
   content,
-}: CaseWebProps): JSX.Element => (
+}: CaseWebProps): ReactElement => (
   <Stack direction="column" spacing={4} height="88%">
     <ImageStack
       direction="row"

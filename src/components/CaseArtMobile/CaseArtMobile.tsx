@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Stack } from '@mui/material'
 import {
   DescriptionSection,
@@ -8,7 +9,7 @@ import {
 export type CaseArtMobileProps = {
   images: string[]
   content: DescriptionSectionProps
-  model: JSX.Element
+  model: ReactElement
   modelHeight?: string
 }
 
@@ -17,7 +18,7 @@ export const CaseArtMobile = ({
   content,
   model,
   modelHeight = '100%',
-}: CaseArtMobileProps): JSX.Element => {
+}: CaseArtMobileProps): ReactElement => {
   return (
     <Stack direction="column" spacing={4} height="100%">
       <Box component="div">

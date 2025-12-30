@@ -1,10 +1,10 @@
-FROM node:15.1.0 as builder
+FROM oven/bun:1 as builder
 WORKDIR /app
 COPY . .
-RUN yarn install --frozen-lockfile
-RUN yarn build
+RUN bun install --frozen-lockfile
+RUN bun run build
 
-FROM node:15.1.0 as runner
+FROM oven/bun:1 as runner
 WORKDIR /app
 ENV NODE_ENV production
 # If you are using a custom next.config.js file, uncomment this line.
@@ -15,4 +15,4 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["bun", "run", "start"]

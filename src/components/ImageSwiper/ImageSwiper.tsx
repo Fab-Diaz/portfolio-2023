@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
@@ -18,7 +19,7 @@ export const ImageSwiper = ({
   height = '100%',
   objectFit = 'cover',
   margin = '20px -20px',
-}: ImageSwiperProps): JSX.Element => (
+}: ImageSwiperProps): ReactElement => (
   <Swiper
     loop={true}
     grabCursor={true}

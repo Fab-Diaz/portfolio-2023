@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import type { NextPage } from 'next'
 import { useMediaQuery } from '@mui/material'
 import {
@@ -84,10 +85,10 @@ const Case: NextPage = () => {
   const [images] = useState<string[]>([
     DEFAULT_IMAGE,
     ...Array.from('x'.repeat(3)).map(
-      (_, i) => `cases/art/${slug}/${slug}_${i + 2}.png`
+      (_, i) => `cases/art/${slug}/${slug}_${i + 2}.png`,
     ),
   ])
-  const [model, setModel] = useState<JSX.Element>(<Loader />)
+  const [model, setModel] = useState<ReactElement>(<Loader />)
 
   const [content, setContent] =
     useState<DescriptionSectionProps>(DEFAULT_CONTENT)

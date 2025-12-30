@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Box, Stack } from '@mui/material'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
@@ -22,7 +23,7 @@ export const ImageStack = ({
   onClick,
   height = '20vh',
   objectFit = 'cover',
-}: ImageStackProps): JSX.Element => (
+}: ImageStackProps): ReactElement => (
   <Stack direction={direction}>
     {images.map((image) => {
       const { link } = image

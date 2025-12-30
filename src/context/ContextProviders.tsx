@@ -15,7 +15,7 @@ interface ContextProvidersProps {
  */
 export const ContextProviders = ({
   children,
-}: ContextProvidersProps): JSX.Element => {
+}: ContextProvidersProps): React.ReactElement => {
   return (
     <HelmetProvider>
       <ThemeContextProvider theme={theme}>

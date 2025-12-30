@@ -7,13 +7,13 @@ type providerWrapperProps = {
   children: ReactNode
 }
 
-const ProviderWrapper = ({ children }: providerWrapperProps): JSX.Element => (
+const ProviderWrapper = ({ children }: providerWrapperProps): ReactElement => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, 'queries'>
+  options?: Omit<RenderOptions, 'queries'>,
 ): RenderResult => render(ui, { wrapper: ProviderWrapper, ...options })
 
 export * from '@testing-library/react'

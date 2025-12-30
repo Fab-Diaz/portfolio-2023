@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import { Button, Stack } from '@mui/material'
 import { useRouter } from 'next/dist/client/router'
 import { DelayedLink } from '@/components'
@@ -31,7 +32,7 @@ export const headerItems: HeaderItem[] = [
   },
 ]
 
-export const Header = (): JSX.Element => {
+export const Header = (): ReactElement => {
   const router = useRouter()
 
   return (
