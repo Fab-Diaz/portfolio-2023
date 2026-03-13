@@ -75,7 +75,7 @@ export const PageLoader = ({
     'Waiting for Godot',
     'Debugging the debugger',
     "Reading 'LOADING...' tips",
-    "Swingin' until midnight",
+        'Swingin\' until midnight',
     'Improvising my life',
     'Singing in the shower',
     'Doing the Macarena',
@@ -83,7 +83,7 @@ export const PageLoader = ({
     'Dusting Stack Overflow',
     'Reading the README',
     'Tap dancing on the keyboard',
-    'Stalking my boss',
+    'Stalking my boss'
   ]
 
   useEffect(() => {
