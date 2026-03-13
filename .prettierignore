@@ -4,3 +4,6 @@ node_modules/*
 dist
 coverage
 storybook-static/*
+# Generated / avoid formatting
+public/mockServiceWorker.js
+*.config.js

@@ -9,7 +9,7 @@
     "storybook": "bun run msw init public/ && start-storybook -s ./public -p 6006",
     "build-storybook": "bun run generate && bun run msw init public/ && build-storybook -s ./public",
     "test": "jest",
-    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|ts|tsx|md|mdx)\"",
+    "prettier": "prettier \"**/*.+(json|yml|yaml|css|ts|tsx|md|mdx)\"",
     "format": "bun run prettier --write",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "eslint --ext .ts,.tsx ./src --fix"
