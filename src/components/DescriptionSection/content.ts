@@ -133,9 +133,11 @@ export const contentImprovUtrecht: DescriptionSectionProps = {
     'Backend management',
     'AI-driven',
     'tRPC',
-    'ongoing',
-    'personal',
+    'Ongoing',
+    'Personal',
   ],
+  buttonLink: 'https://www.improvutrecht.nl/drop-in-workshops/',
+  buttonText: 'Visit website (& select a workshop)',
 }
 
 export const contentFlorbs: DescriptionSectionProps = {
@@ -283,9 +285,11 @@ export const contentLooparity: DescriptionSectionProps = {
     'Backend management',
     'AI-driven',
     'tRPC',
-    'ongoing',
-    'personal',
+    'Ongoing',
+    'Personal',
   ],
+  buttonLink: 'https://looparity-www.vercel.app/',
+  buttonText: 'Try it out!',
 }
 
 export const contentContact: DescriptionSectionProps = {
