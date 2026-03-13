@@ -1,0 +1,47 @@
+import { Box, useMediaQuery } from '@mui/material'
+import {
+  CaseGrid,
+  contentBusiness,
+  DescriptionSection,
+  GeneralContainer,
+  Header,
+  HeaderMobile,
+} from '@/components'
+import theme from '@/styles/theme'
+var Entrepreneur = function () {
+  var isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
+  var caseItems = [
+    {
+      image: 'business/looparity/looparity_1.png',
+      title: 'Looparity',
+      link: '/case/business/looparity',
+    },
+    {
+      image: 'business/plainshare/plainshare_1.png',
+      title: 'Plainshare',
+      link: '/case/business/plainshare',
+    },
+    {
+      image: 'business/taalqafe/taalqafe_1.png',
+      title: 'TaalQafe',
+      link: '/case/business/taalqafe',
+    },
+    {
+      image: 'business/bob/bob_1.png',
+      title: 'Bob',
+      link: '/case/business/bob',
+    },
+  ]
+  return (
+    <GeneralContainer>
+      {isTabletAndMobile ? <HeaderMobile /> : <Header />}
+      <Box component="div" width={{ xs: '100%', md: '50%' }}>
+        <DescriptionSection {...contentBusiness} />
+      </Box>
+      <Box component="div" sx={{ mt: 16 }}>
+        <CaseGrid items={caseItems} />
+      </Box>
+    </GeneralContainer>
+  )
+}
+export default Entrepreneur
