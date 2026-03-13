@@ -7,3 +7,7 @@ storybook-static/*
 # Generated / avoid formatting
 public/mockServiceWorker.js
 *.config.js
+
+# Only format TS/TSX and config/content files, not plain JS/JSX
+*.js
+*.jsx
