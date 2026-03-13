@@ -19,28 +19,55 @@ export const ImageSwiper = ({
   height = '100%',
   objectFit = 'cover',
   margin = '20px -20px',
-}: ImageSwiperProps): ReactElement => (
-  <Swiper
-    loop={true}
-    grabCursor={true}
-    slidesPerView={1.2}
-    spaceBetween={10}
-    centeredSlides={true}
-    style={{ margin }}
-  >
-    {images.map((image) => (
-      <SwiperSlide key={image} style={{ height }}>
+}: ImageSwiperProps): ReactElement => {
+  if (images.length === 0) return <></>
+
+  const singleImage = images.length === 1
+  const slideHeight = height
+
+  if (singleImage) {
+    return (
+      <div style={{ margin, height: slideHeight }}>
         <LazyLoadImage
           effect="blur"
-          src={`/static/images/${image}`}
-          alt={image}
+          src={`/static/images/${images[0]}`}
+          alt={images[0]}
           width="100%"
           height="100%"
           style={{
             objectFit,
+            width: '100%',
+            height: '100%',
+            display: 'block',
           }}
         />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-)
+      </div>
+    )
+  }
+
+  return (
+    <Swiper
+      loop={images.length > 1}
+      grabCursor={images.length > 1}
+      slidesPerView={1.2}
+      spaceBetween={10}
+      centeredSlides={true}
+      style={{ margin }}
+    >
+      {images.map((image) => (
+        <SwiperSlide key={image} style={{ height: slideHeight }}>
+          <LazyLoadImage
+            effect="blur"
+            src={`/static/images/${image}`}
+            alt={image}
+            width="100%"
+            height="100%"
+            style={{
+              objectFit,
+            }}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  )
+}

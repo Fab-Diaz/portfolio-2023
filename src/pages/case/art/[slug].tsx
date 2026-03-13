@@ -15,9 +15,10 @@ import {
   ModelViewer,
   Video,
 } from '@/components'
+import { getCaseImageCount } from '@/config/caseImageCounts'
 import theme from '@/styles/theme'
 import { useRouter } from 'next/dist/client/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Loader } from '@react-three/drei'
 
 const Case: NextPage = () => {
@@ -26,8 +27,18 @@ const Case: NextPage = () => {
   const router = useRouter()
 
   const slug = router.query.slug
+  const imageCount = slug ? getCaseImageCount('art', slug as string) : 0
 
-  const DEFAULT_IMAGE = `cases/art/${slug}/${slug}_1.png`
+  const images = useMemo<string[]>(
+    () =>
+      slug
+        ? Array.from(
+            { length: imageCount },
+            (_, i) => `cases/art/${slug}/${slug}_${i + 1}.png`,
+          )
+        : [],
+    [slug, imageCount],
+  )
 
   const ModelOffice = (
     <ModelViewer
@@ -82,12 +93,6 @@ const Case: NextPage = () => {
 
   const VideoLamp = <Video link="/static/videos/lamp.mp4" />
 
-  const [images] = useState<string[]>([
-    DEFAULT_IMAGE,
-    ...Array.from('x'.repeat(3)).map(
-      (_, i) => `cases/art/${slug}/${slug}_${i + 2}.png`,
-    ),
-  ])
   const [model, setModel] = useState<ReactElement>(<Loader />)
 
   const [content, setContent] =

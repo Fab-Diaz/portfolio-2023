@@ -13,6 +13,7 @@ import {
   Header,
   HeaderMobile,
 } from '@/components'
+import { getCaseImageCount } from '@/config/caseImageCounts'
 import theme from '@/styles/theme'
 import { useRouter } from 'next/dist/client/router'
 import { useEffect, useMemo, useState } from 'react'
@@ -23,11 +24,7 @@ const Case: NextPage = () => {
   const router = useRouter()
 
   const slug = router.query.slug
-
-  const imageCountBySlug: Record<string, number> = {
-    looparity: 3,
-  }
-  const imageCount = slug ? (imageCountBySlug[slug as string] ?? 6) : 6
+  const imageCount = slug ? getCaseImageCount('business', slug as string) : 0
 
   const images = useMemo(
     () =>
