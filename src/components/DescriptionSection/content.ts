@@ -23,7 +23,7 @@ export const contentWeb: DescriptionSectionProps = {
     'I have worked with a wide range of technologies and frameworks, but my favorite and most used one is React. ' +
     "Here's a selection of web and mobile projects I have done during my career. " +
     'They go from simple showcase website to complex e-commerces. ' +
-    'Despite most of those project being internal or outdated, ' +
+    'Despite some of those project being internal or outdated, ' +
     'I am proud of them and I hope you will enjoy exploring them as well.',
 }
 
@@ -59,7 +59,7 @@ export const contentRampage: DescriptionSectionProps = {
     'e-commerce business, should have complete freedom to build ' +
     'the best e-commerce experience for their consumer. ' +
     'That is what we did for Rampage.',
-  tags: ['NextJs', 'Typescript', 'Shopify', 'GraphQL'],
+  tags: ['NextJs', 'Typescript', 'Shopify', 'GraphQL', '2021-2022'],
   warning: 'This project is no longer maintained.',
 }
 
@@ -74,7 +74,7 @@ export const contentRobidus: DescriptionSectionProps = {
     'from +100 providers listed on the platform. ' +
     'The platform provides a tracking system where case managers can manage ' +
     'their booked interventions in an efficient way.',
-  tags: ['ReactJs', 'Typescript'],
+  tags: ['ReactJs', 'Typescript', '2021-2022'],
   warning: 'This project is not public.',
 }
 
@@ -89,7 +89,7 @@ export const contentVloto: DescriptionSectionProps = {
     'such as Felyx and ShareNow, and on Vloto’s wishes, accessible and eye-catching. ' +
     'Our developers were able to communicate efficiently with the company’s ' +
     'API and ensured that the overall experience stayed secure.',
-  tags: ['React Native'],
+  tags: ['React Native', '2021'],
   buttonLink: 'https://www.vloto.nl/',
   buttonText: 'Visit website',
 }
@@ -102,7 +102,7 @@ export const contentQandidates: DescriptionSectionProps = {
     'The platform, built with a focus on privacy and security, ' +
     'allows you to apply for jobs without having to share your personal information. ' +
     'For recruiters, it is a great way to find the best candidates for their vacancies.',
-  tags: ['NextJs', 'Typescript', 'Cypress', 'GraphQL'],
+  tags: ['NextJs', 'Typescript', 'GraphQL', '2022'],
   buttonLink: 'https://www.qandidates.com/',
   buttonText: 'Visit website',
 }
@@ -116,9 +116,26 @@ export const contentRebels: DescriptionSectionProps = {
     'for both clients and future employees ' +
     'Based in Amsterdam, I worked as a front-end developer for ' +
     'Rebels and built, along with great colleagues, this modern and fast website.',
-  tags: ['NextJs', 'Typescript'],
+  tags: ['NextJs', 'Typescript', '2020'],
   buttonLink: 'https://www.rebels.io/',
   buttonText: 'Visit website',
+}
+
+export const contentImprovUtrecht: DescriptionSectionProps = {
+  title: 'Improv Utrecht',
+  subtitle: 'Web App',
+  description:
+    'A registration system for Improv Utrecht workshops and drop-ins: ' +
+    'it provides public registration forms, waitlist handling, and email confirmations and reminders.',
+  tags: [
+    'NextJs',
+    'Typescript',
+    'Backend management',
+    'AI-driven',
+    'tRPC',
+    'ongoing',
+    'personal',
+  ],
 }
 
 export const contentFlorbs: DescriptionSectionProps = {
@@ -130,7 +147,7 @@ export const contentFlorbs: DescriptionSectionProps = {
     'for Google Workspace ' +
     'Based in Utrecht, I worked as a front-end developer for ' +
     'Florbs and built, along with great colleagues, their customizable and reliable platform.',
-  tags: ['VueJs'],
+  tags: ['VueJs', '2023-2024'],
   buttonLink: 'https://www.florbs.io/',
   buttonText: 'Visit website',
 }
@@ -144,7 +161,7 @@ export const contentFinancialLease: DescriptionSectionProps = {
     'and apply for a lease.' +
     'The application was built with a focus on simplicity and automation ' +
     'for business owners. Get your vehicle in a matter of 2 cups of coffee.',
-  tags: ['React Native', 'Typescript'],
+  tags: ['Expo', 'Typescript', 'Ongoing'],
   buttonLink: 'https://www.financiallease.nl/',
   buttonText: 'Visit website',
 }
@@ -156,9 +173,31 @@ export const contentGassan: DescriptionSectionProps = {
     'Gassan is a Dutch family-owned company specializing in luxury diamonds,' +
     'jewelry, and watches, with a plus-value in combining in-house diamond ' +
     'cutting expertise, heritage craftsmanship, and exclusive retail experiences for high-end clients.',
-  tags: ['NextJs', 'Typescript', 'GraphQL', 'Backend management'],
+  tags: ['NextJs', 'Typescript', 'GraphQL', 'Backend management', 'Ongoing'],
   buttonLink: 'https://www.gassan.com/',
   buttonText: 'Visit website',
+}
+
+export const contentDimpr: DescriptionSectionProps = {
+  title: 'Dimpr',
+  subtitle: 'Web App',
+  description:
+    'Dimpr is a mobile-first application which improves the relationship between employers and employees. ' +
+    'This is done through weekly surveys and feedback provided by AI agents, aiming to support both professional and personal growth. ' +
+    'It presents both an admin dashboard and a user dashboard, allowing employers to manage their employees and employees to track their progress.',
+  tags: ['NextJs', 'Typescript', 'AI-driven', 'Backend management', '2025'],
+  buttonLink: 'https://dimpr.nl/',
+  buttonText: 'Visit website',
+}
+
+export const contentGeniebi: DescriptionSectionProps = {
+  title: 'Geniebi',
+  subtitle: 'Web App',
+  description:
+    'Geniebi is a business intelligence web application aimed for companies who want to keep track of their budget. ' +
+    'The platform allows companies to upload their invoices and expenses, and forecast their expenses based on their invoices.',
+  tags: ['NextJs', 'Typescript', 'AI-driven', '2026'],
+  warning: 'This project is not public.',
 }
 
 export const contentOffice: DescriptionSectionProps = {
@@ -229,6 +268,24 @@ export const contentBob: DescriptionSectionProps = {
     'From level design to marketing, I was able to present this project during trade fairs.',
   buttonText: 'Get the game for free',
   buttonLink: 'https://unitrax.itch.io/bob',
+}
+
+export const contentLooparity: DescriptionSectionProps = {
+  title: 'Looparity',
+  subtitle: 'Web App',
+  description:
+    'A simple project for music lovers who want to practice dancing or composing. ' +
+    'By selecting a song (or just a tempo), the app breaks down the rhythm, energy and structure, ' +
+    'aligning handy gadgets with your creativity.',
+  tags: [
+    'NextJs',
+    'Typescript',
+    'Backend management',
+    'AI-driven',
+    'tRPC',
+    'ongoing',
+    'personal',
+  ],
 }
 
 export const contentContact: DescriptionSectionProps = {

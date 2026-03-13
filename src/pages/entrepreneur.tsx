@@ -16,6 +16,11 @@ const Entrepreneur: NextPage = () => {
 
   const caseItems: CaseGridItem[] = [
     {
+      image: 'business/looparity/looparity_1.png',
+      title: 'Looparity',
+      link: '/case/business/looparity',
+    },
+    {
       image: 'business/plainshare/plainshare_1.png',
       title: 'Plainshare',
       link: '/case/business/plainshare',

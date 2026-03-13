@@ -26,6 +26,16 @@ const Developer: NextPage = () => {
       link: '/case/web/financial-lease',
     },
     {
+      image: 'web/dimpr/dimpr_1.png',
+      title: 'Dimpr',
+      link: '/case/web/dimpr',
+    },
+    {
+      image: 'web/geniebi/geniebi_1.png',
+      title: 'Geniebi',
+      link: '/case/web/geniebi',
+    },
+    {
       image: 'web/rampage/rampage_1.png',
       title: 'Rampage',
       link: '/case/web/rampage',
@@ -54,6 +64,11 @@ const Developer: NextPage = () => {
       image: 'web/rebels/rebels_1.png',
       title: 'Rebels',
       link: '/case/web/rebels',
+    },
+    {
+      image: 'web/improv-utrecht/improv-utrecht_1.png',
+      title: 'Improv Utrecht',
+      link: '/case/web/improv-utrecht',
     },
   ]
 

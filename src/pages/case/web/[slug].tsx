@@ -3,14 +3,17 @@ import { useMediaQuery } from '@mui/material'
 import {
   CaseWeb,
   CaseWebMobile,
+  contentDimpr,
+  contentFlorbs,
+  contentFinancialLease,
+  contentGeniebi,
+  contentGassan,
+  contentImprovUtrecht,
   contentQandidates,
   contentRampage,
   contentRebels,
   contentRobidus,
   contentVloto,
-  contentFlorbs,
-  contentFinancialLease,
-  contentGassan,
   DEFAULT_CONTENT,
   DescriptionSectionProps,
   GeneralContainer,
@@ -74,8 +77,17 @@ const Case: NextPage = () => {
       case 'gassan':
         setContent(contentGassan)
         break
+      case 'dimpr':
+        setContent(contentDimpr)
+        break
+      case 'geniebi':
+        setContent(contentGeniebi)
+        break
+      case 'improv-utrecht':
+        setContent(contentImprovUtrecht)
+        break
     }
-  }, [])
+  }, [slug])
 
   return (
     <GeneralContainer>

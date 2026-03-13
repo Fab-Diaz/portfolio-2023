@@ -4,6 +4,7 @@ import {
   CaseBusiness,
   CaseBusinessMobile,
   contentBob,
+  contentLooparity,
   contentPlainshare,
   contentTaalqafe,
   DEFAULT_CONTENT,
@@ -14,7 +15,7 @@ import {
 } from '@/components'
 import theme from '@/styles/theme'
 import { useRouter } from 'next/dist/client/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const Case: NextPage = () => {
   const isTabletAndMobile = useMediaQuery(theme.breakpoints.down('lg'))
@@ -23,14 +24,21 @@ const Case: NextPage = () => {
 
   const slug = router.query.slug
 
-  const DEFAULT_IMAGE = `cases/business/${slug}/${slug}_1.png`
+  const imageCountBySlug: Record<string, number> = {
+    looparity: 3,
+  }
+  const imageCount = slug ? (imageCountBySlug[slug as string] ?? 6) : 6
 
-  const [images] = useState<string[]>([
-    DEFAULT_IMAGE,
-    ...Array.from('x'.repeat(5)).map(
-      (_, i) => `cases/business/${slug}/${slug}_${i + 2}.png`,
-    ),
-  ])
+  const images = useMemo(
+    () =>
+      slug
+        ? Array.from(
+            { length: imageCount },
+            (_, i) => `cases/business/${slug}/${slug}_${i + 1}.png`,
+          )
+        : [],
+    [slug, imageCount],
+  )
 
   const [content, setContent] =
     useState<DescriptionSectionProps>(DEFAULT_CONTENT)
@@ -46,8 +54,11 @@ const Case: NextPage = () => {
       case 'bob':
         setContent(contentBob)
         break
+      case 'looparity':
+        setContent(contentLooparity)
+        break
     }
-  }, [])
+  }, [slug])
 
   return (
     <GeneralContainer>

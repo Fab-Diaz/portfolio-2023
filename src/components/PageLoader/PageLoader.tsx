@@ -71,6 +71,19 @@ export const PageLoader = ({
     'Hunting aliens',
     "Buying NFT's",
     'Sketching the page',
+    'Googling how to Google',
+    'Waiting for Godot',
+    'Debugging the debugger',
+    "Reading 'LOADING...' tips",
+        'Swingin\' until midnight',
+    'Improvising my life',
+    'Singing in the shower',
+    'Doing the Macarena',
+    'Popping the bubble',
+    'Dusting Stack Overflow',
+    'Reading the README',
+    'Tap dancing on the keyboard',
+    'Stalking my boss'
   ]
 
   useEffect(() => {

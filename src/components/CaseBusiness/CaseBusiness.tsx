@@ -14,13 +14,24 @@ export type CaseBusinessProps = {
 export const CaseBusiness = ({
   images,
   content,
-}: CaseBusinessProps): ReactElement => (
-  <Stack direction="row" spacing={4} height="88%">
-    <Box component="div" flex={30}>
-      <DescriptionSection {...content} />
-    </Box>
-    <Box component="div" flex={70}>
-      <ImageGrid images={images} sizeMd={3} elementHeight={370} />
-    </Box>
-  </Stack>
-)
+}: CaseBusinessProps): ReactElement => {
+  const isColumnLayout = images.length <= 3
+  return (
+    <Stack
+      direction={isColumnLayout ? 'column' : 'row'}
+      spacing={4}
+      height={isColumnLayout ? 'fit-content' : '88%'}
+    >
+      <Box
+        component="div"
+        flex={isColumnLayout ? undefined : 30}
+        {...(isColumnLayout && { sx: { width: '50%', maxWidth: '50vw' } })}
+      >
+        <DescriptionSection {...content} />
+      </Box>
+      <Box component="div" flex={isColumnLayout ? undefined : 70}>
+        <ImageGrid images={images} sizeMd={3} elementHeight={370} />
+      </Box>
+    </Stack>
+  )
+}
